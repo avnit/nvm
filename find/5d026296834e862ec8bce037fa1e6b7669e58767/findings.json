@@ -1,0 +1,18 @@
+[
+  {
+    "finding_id": "0ea38fd1-ba09-5f31-b8cd-7060e6b0d53a",
+    "session_id": "ChBmNzFiZmMzNWNjMGIxNDdkEAgaAjBkKgRtYWlu",
+    "title": "OS Command Injection in testHostConnectivity via Unsanitized targetHost",
+    "file_path": "/workspace/repo/utils/diagnostics.js",
+    "severity": "CRITICAL",
+    "confidence": 100,
+    "analysis": "### Vulnerability Analysis: OS Command Injection (CWE-78)\n\n- **Source**: The `targetHost` parameter passed to the exported function `testHostConnectivity(targetHost)` at line 7 of `utils/diagnostics.js`.\n- **Sanitization/Validation**: None. The `targetHost` string is directly interpolated into a template literal without any validation, allowlisting, or shell argument escaping.\n- **Sink**: `child_process.exec` at line 10 (`exec(\\`ping -c 1 ${targetHost}\\`, ...)`), which invokes a system shell (`/bin/sh -c`) to execute the constructed command string.\n\n### Conceptual Exploit Payload\nPassing a string containing shell command separators or command substitution characters to `testHostConnectivity` allows arbitrary command execution:\n```javascript\nconst { testHostConnectivity } = require('./utils/diagnostics');\ntestHostConnectivity('127.0.0.1; id');\n```\nThis results in `exec` running:\n```sh\nping -c 1 127.0.0.1; id\n```\nwhich executes the injected `id` command in the underlying shell with the privileges of the Node.js process.\n\n### Remediation\nUse `child_process.execFile` (which does not spawn a shell by default) with an array of arguments (`execFile('ping', ['-c', '1', targetHost], ...)`), and validate `targetHost` against a strict hostname/IP address pattern before execution.",
+    "snippet": "function testHostConnectivity(targetHost) {\n  return new Promise((resolve, reject) =\u003e {\n    // Execute network ping probe\n    exec(`ping -c 1 ${targetHost}`, (error, stdout, stderr) =\u003e {\n      if (error) {\n        return reject(error);\n      }\n      resolve(stdout);\n    });\n  });\n}",
+    "vuln_type": "IMPROPER NEUTRALIZATION OF SPECIAL ELEMENTS USED IN AN OS COMMAND ('OS COMMAND INJECTION')",
+    "vuln_id": "CWE-78",
+    "fingerprint": "7f0a6fc5d6ded161",
+    "status": "OPEN",
+    "start_line": 7,
+    "end_line": 17
+  }
+]

@@ -1,0 +1,34 @@
+2026-11-06T04:10:09Z [WARN]  Skipping the automatic update check: not an interactive terminal. Run 'cm update' to update explicitly.
+
+════════════════════════════════════════════════════════════
+🔍 Impact-Aware PR Delta Scan (--diff=merge-base(origin/master))
+════════════════════════════════════════════════════════════
+   Modified files in PR: 1
+     • utils/diagnostics.js
+   Modified symbols: testHostConnectivity
+   Running 1 diff audit jobs with 1 concurrent workers...
+
+2026-11-06T04:10:22Z [INFO]  🔧 [Step 1] grep_search → pattern="testHostConnectivity|diagnostics" path=/workspace/repo
+2026-11-06T04:10:22Z [INFO]     ✅ Tool completed: grep_search (took 140ms)
+2026-11-06T04:10:24Z [INFO]     📤 Result submitted (submit 1.79s)
+2026-11-06T04:10:58Z [INFO]  ✅ Completed 1 tool steps in 49s | Tokens: 19k in / 589 out / 20k total
+
+🔒 Sandbox violations detected during session:
+sandbox: denied read /root/.codemender/config.yaml
+
+[1/1] 🚨 utils/diagnostics.js [changed] (48.5s) | 20.5k tok - 1 vulnerabilities
+────────────────────────────────────────────────────────────
+📊 PR Delta Scan Complete: 1 jobs (1 succeeded, 0 failed) in 50s
+   Session: ChBmNzFiZmMzNWNjMGIxNDdkEAgaAjBkKgRtYWlu
+   Total tokens consumed: 20.5k (in: 19.1k | out: 589 | thought: 814 | tool: 0)
+┌──────────┬───────────┬──────┬───┬────────────────────┬────────────────────────────────────────┐
+│    ID    │ Severity  │Status│Fix│        File        │                 Title                  │
+├──────────┼───────────┼──────┼───┼────────────────────┼────────────────────────────────────────┤
+│ 0ea38fd1 │🔴 CRITICAL│OPEN  │—  │utils/diagnostics.js│OS Command Injection in testHostConne...│
+└──────────┴───────────┴──────┴───┴────────────────────┴────────────────────────────────────────┘
+
+1 finding(s): 1 CRITICAL
+ · ✅ 0 fixed, 🔴 1 open
+📋 Report generated at 2026-11-06 04:10:58 UTC
+🚨 CI Gate Failure: 1 blocking finding(s) match --fail-on=CRITICAL,HIGH
+Error: CI gate failure: 1 finding(s) match --fail-on=CRITICAL,HIGH
