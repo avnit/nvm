@@ -1,0 +1,41 @@
+=== CodeMender session log started at 2026-11-06T04:14:35Z ===
+2026-11-06T04:14:35Z [DEBUG] Config server: https://aiplatform.googleapis.com
+2026-11-06T04:14:35Z [DEBUG] Executing git in /workspace/repo: git diff --no-color --no-ext-diff --src-prefix=a/ --dst-prefix=b/ -U3 48d09abf12a9bdc1bf60f33ffd59760f4b899c3d
+2026-11-06T04:14:35Z [DEBUG] Filesystem sandbox roots: [/workspace/repo]
+
+════════════════════════════════════════════════════════════
+🔍 Impact-Aware PR Delta Scan (--diff=merge-base(origin/master))
+════════════════════════════════════════════════════════════
+   Modified files in PR: 2
+     • .cm_project
+     • utils/diagnostics.js
+   Modified symbols: testHostConnectivity
+   Running 2 diff audit jobs with 2 concurrent workers...
+
+2026-11-06T04:14:35Z [DEBUG] Filesystem sandbox roots: [/workspace/repo]
+2026-11-06T04:14:35Z [DEBUG] Command policy loaded: 0 blocked commands, 0 blocked patterns (global=/root/.codemender/command_policy.yaml, project=/workspace/repo/.codemender/command_policy.yaml)
+2026-11-06T04:14:36Z [DEBUG] StartSession accepted: operation=ChA4ZTE4MWVhZmY3YjhhYjdjEAgaAjg3KgRtYWlu session=ChA4ZTE4MWVhZmY3YjhhYjdjEAgaAjg3KgRtYWlu
+2026-11-06T04:14:36Z [DEBUG] Starting polling loop: operation=ChA4ZTE4MWVhZmY3YjhhYjdjEAgaAjg3KgRtYWlu session=ChA4ZTE4MWVhZmY3YjhhYjdjEAgaAjg3KgRtYWlu
+2026-11-06T04:14:36Z [DEBUG] WaitOperation #1: request=ChA4ZTE4MWVhZmY3YjhhYjdjEAgaAjg3KgRtYWlu
+2026-11-06T04:14:36Z [DEBUG] StartSession accepted: operation=ChA5NmNjMDg4OWE2NDU2YTZiEAgaAmExKgRtYWlu session=ChA5NmNjMDg4OWE2NDU2YTZiEAgaAmExKgRtYWlu
+2026-11-06T04:14:36Z [DEBUG] Starting polling loop: operation=ChA5NmNjMDg4OWE2NDU2YTZiEAgaAmExKgRtYWlu session=ChA5NmNjMDg4OWE2NDU2YTZiEAgaAmExKgRtYWlu
+2026-11-06T04:14:36Z [DEBUG] WaitOperation #1: request=ChA5NmNjMDg4OWE2NDU2YTZiEAgaAmExKgRtYWlu
+2026-11-06T04:14:49Z [DEBUG] WaitOperation response: operation=ChA4ZTE4MWVhZmY3YjhhYjdjEAgaAjg3KgRtYWlu done=true last_event_id=v1_MF91bnNldF8xNzkzOTM4NDg1ODM5Nzc0 turn_usage=&{Input:5512 Output:33 Cached:3121 Thought:55 ToolUse:0 Total:5600 ModelInvocations:0 LastSeqNum:0} interaction_usage=&{Input:5512 Output:33 Cached:3121 Thought:55 ToolUse:0 Total:5600 ModelInvocations:0 LastSeqNum:0}
+2026-11-06T04:14:49Z [DEBUG] WaitOperation #1 (status=completed, stage="", took=13.232s)
+2026-11-06T04:14:49Z [DEBUG] Status transition: "" → "completed"
+2026-11-06T04:14:49Z [DEBUG] Session terminated (status=completed) after 1 polls (13.232s)
+[1/2] ✅ .cm_project [changed] (13.2s) | 5.6k tok - 0 vulnerabilities
+2026-11-06T04:14:50Z [DEBUG] WaitOperation response: operation=ChA5NmNjMDg4OWE2NDU2YTZiEAgaAmExKgRtYWlu done=true last_event_id=v1_MF91bnNldF8xNzkzOTM4NDg5NTE5NTcy turn_usage=&{Input:5842 Output:32 Cached:3121 Thought:412 ToolUse:0 Total:6286 ModelInvocations:0 LastSeqNum:0} interaction_usage=&{Input:5842 Output:32 Cached:3121 Thought:412 ToolUse:0 Total:6286 ModelInvocations:0 LastSeqNum:0}
+2026-11-06T04:14:50Z [DEBUG] WaitOperation #1 (status=completed, stage="", took=13.823s)
+2026-11-06T04:14:50Z [DEBUG] Status transition: "" → "completed"
+2026-11-06T04:14:50Z [DEBUG] Session terminated (status=completed) after 1 polls (13.823s)
+[2/2] ✅ utils/diagnostics.js [changed] (13.8s) | 6.3k tok - 0 vulnerabilities
+────────────────────────────────────────────────────────────
+📊 PR Delta Scan Complete: 2 jobs (2 succeeded, 0 failed) in 15s
+   Session: ChA4ZTE4MWVhZmY3YjhhYjdjEAgaAjg3KgRtYWlu
+   Total tokens consumed: 11.9k (in: 11.4k | out: 65 | thought: 467 | tool: 0)
+No findings. Run 'cm find <path>' to scan for vulnerabilities.
+
+✅ CI Gate Passed: 0 blocking vulnerabilities detected in PR diff.
+2026-11-06T04:14:50Z [INFO ] 📄 Session log: /root/.codemender/logs/20261106T041435Z_ChA4ZTE4MWVhZmY3YjhhYjdjEAgaAjg3KgRtYWlu.log
+=== Session log ended at 2026-11-06T04:14:50Z ===

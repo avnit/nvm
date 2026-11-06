@@ -1,0 +1,28 @@
+
+════════════════════════════════════════════════════════════
+🔍 Impact-Aware PR Delta Scan (--diff=merge-base(origin/master))
+════════════════════════════════════════════════════════════
+   Modified files in PR: 2
+     • .cm_project
+     • utils/diagnostics.js
+   Modified symbols: testHostConnectivity
+   Running 2 diff audit jobs with 2 concurrent workers...
+
+
+🔒 Sandbox violations detected during session:
+sandbox: denied read /root/.codemender/config.yaml
+
+[1/2] ✅ .cm_project [changed] (13.2s) | 5.6k tok - 0 vulnerabilities
+
+🔒 Sandbox violations detected during session:
+sandbox: denied read /root/.codemender/config.yaml
+
+[2/2] ✅ utils/diagnostics.js [changed] (13.8s) | 6.3k tok - 0 vulnerabilities
+────────────────────────────────────────────────────────────
+📊 PR Delta Scan Complete: 2 jobs (2 succeeded, 0 failed) in 15s
+   Session: ChA4ZTE4MWVhZmY3YjhhYjdjEAgaAjg3KgRtYWlu
+   Total tokens consumed: 11.9k (in: 11.4k | out: 65 | thought: 467 | tool: 0)
+No findings. Run 'cm find <path>' to scan for vulnerabilities.
+
+✅ CI Gate Passed: 0 blocking vulnerabilities detected in PR diff.
+2026-11-06T04:14:50Z [INFO]  📄 Session log: /root/.codemender/logs/20261106T041435Z_ChA4ZTE4MWVhZmY3YjhhYjdjEAgaAjg3KgRtYWlu.log
