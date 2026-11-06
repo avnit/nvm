@@ -1,0 +1,59 @@
+=== CodeMender session log started at 2026-11-06T04:10:04Z ===
+2026-11-06T04:10:04Z [DEBUG] Config server: https://aiplatform.googleapis.com
+2026-11-06T04:10:04Z [DEBUG] Creating transport client...
+2026-11-06T04:10:04Z [DEBUG] Connected to server: https://aiplatform.googleapis.com
+2026-11-06T04:10:04Z [DEBUG] Filesystem sandbox roots: [/workspace/repo]
+2026-11-06T04:10:04Z [DEBUG] Input target: /workspace/repo
+2026-11-06T04:10:04Z [DEBUG] Include extensions: [.py .java .go .js .jsx .mjs .cjs .ts .tsx .c .cc .cpp .cxx .h .hh .hpp .hxx .inl .ipp .cs .rs .kt .kts .rb .php .sol .tf .hcl]
+2026-11-06T04:10:04Z [DEBUG] Exclude extensions: [.min.js .generated.go .pb.go]
+2026-11-06T04:10:04Z [DEBUG] Using .cmignore file: /workspace/repo/.cmignore
+🔍 Discovering files in /workspace/repo...
+
+════════════════════════════════════════════════════════════
+🔍 Deep Scan: Concurrent File-by-File Vulnerability Audit...
+════════════════════════════════════════════════════════════
+🔍 Deep Scan Sifter: 1 total files discovered
+   Tier 0 Pruner: 1 safe files pruned (tests, docs, DTOs, generated, lockfiles) at 0 token cost
+2026-11-06T04:10:04Z [DEBUG] Tier 0 pruned test/slow/nvm reinstall-packages/test-npmlink/index.js: test / documentation / fixture directory
+────────────────────────────────────────────────────────────
+📊 Deep Scan Sifter Complete: 1/1 files examined (1 pruned at Tier 0) in 0s
+   No candidate source files required LLM evaluation.
+
+✅ No vulnerabilities found!
+2026-11-06T04:10:04Z [INFO ] 📄 Session log: /root/.codemender/logs/20261106T041004Z_pending.log
+=== Session log ended at 2026-11-06T04:10:04Z ===
+=== CodeMender session log started at 2026-11-06T04:10:04Z ===
+2026-11-06T04:10:04Z [WARN ] Skipping the automatic update check: not an interactive terminal. Run 'cm update' to update explicitly.
+# CodeMender Security Report
+
+✅ No findings.
+2026-11-06T04:10:04Z [INFO ] 📄 Session log: /root/.codemender/logs/20261106T041004Z_pending.log
+=== Session log ended at 2026-11-06T04:10:04Z ===
+=== CodeMender session log started at 2026-11-06T04:10:04Z ===
+[]
+2026-11-06T04:10:04Z [INFO ] 📄 Session log: /root/.codemender/logs/20261106T041004Z_pending.log
+=== Session log ended at 2026-11-06T04:10:04Z ===
+=== CodeMender session log started at 2026-11-06T04:10:04Z ===
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/main/sarif-2.1/schema/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "CodeMender",
+          "version": "dev",
+          "rules": []
+        }
+      },
+      "results": []
+    }
+  ]
+}
+2026-11-06T04:10:04Z [INFO ] 📄 Session log: /root/.codemender/logs/20261106T041004Z_pending.log
+=== Session log ended at 2026-11-06T04:10:04Z ===
+=== CodeMender session log started at 2026-11-06T04:10:04Z ===
+📄 HTML report written to file:///root/.codemender/reports/report.html
+💡 Hint: use --open to open the report in your browser
+2026-11-06T04:10:04Z [INFO ] 📄 Session log: /root/.codemender/logs/20261106T041004Z_pending.log
+=== Session log ended at 2026-11-06T04:10:04Z ===

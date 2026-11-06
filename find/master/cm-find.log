@@ -1,0 +1,13 @@
+🔍 Discovering files in /workspace/repo...
+
+════════════════════════════════════════════════════════════
+🔍 Deep Scan: Concurrent File-by-File Vulnerability Audit...
+════════════════════════════════════════════════════════════
+🔍 Deep Scan Sifter: 1 total files discovered
+   Tier 0 Pruner: 1 safe files pruned (tests, docs, DTOs, generated, lockfiles) at 0 token cost
+────────────────────────────────────────────────────────────
+📊 Deep Scan Sifter Complete: 1/1 files examined (1 pruned at Tier 0) in 0s
+   No candidate source files required LLM evaluation.
+
+✅ No vulnerabilities found!
+2026-11-06T04:10:04Z [INFO]  📄 Session log: /root/.codemender/logs/20261106T041004Z_pending.log
